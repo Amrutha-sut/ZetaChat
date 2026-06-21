@@ -1,0 +1,63 @@
+*{
+    color:#ececec;
+    font-family:Roboto,'Open Sans','Helvetuca Neue','sans-serif';
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.app{
+    background-color: #212121;
+    display: flex;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #1e1e1e; /* Matches your UI background */
+    overflow: hidden; /* Prevents the main window from ever creating a giant white scrollbar */
+}
+
+/* Global scrollbar rules for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #131314; /* Deep dark track background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3e3f42; /* Sleek dark gray handle */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4e4f52;
+}
+/* Mobile devices (default styles go here) */
+body {
+  font-size: 14px;
+}
+
+/* Tablets (Portrait) */
+@media screen and (min-width: 600px) {
+  /* Adjust sidebar visibility or layout grids */
+}
+
+/* Tablets (Landscape) / Small Laptops */
+@media screen and (min-width: 768px) {
+  /* Transition to multi-column split layouts */
+}
+
+/* Laptops and Desktops */
+@media screen and (min-width: 1024px) {
+  /* Set maximum constraints for wide views */
+}
+
+/* Large Screens */
+@media screen and (min-width: 1280px) {
+  /* Increase padding and text scalability */
+}

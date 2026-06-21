@@ -1,0 +1,232 @@
+.pricing-fullscreen-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #212121; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.pricing-card-container {
+  position: relative;
+  width: 100%;
+  max-width: 940px;
+  background-color: #2f3037; 
+  border: 1px solid #42434e;
+  border-radius: 12px;
+  padding: 40px 32px 32px 32px;
+  box-sizing: border-box;
+  font-family: Söhne, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: #ececf1;
+}
+
+.pricing-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.pricing-modal-close:hover {
+  background-color: #40414f;
+  color: #ffffff;
+}
+
+/* Header typography styles */
+.pricing-modal-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.pricing-modal-header h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.pricing-modal-header p {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Standard Flex Cards Matrix Rows Grid mapping */
+.pricing-modal-grid {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Card Individual Layout blocks */
+.pricing-tier-card {
+  flex: 1;
+  background-color: #202123; 
+  border: 1px solid #40414f;
+  border-radius: 12px;
+  padding: 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Plus tier accent changes */
+.premium-tier-card {
+  border: 1px solid #4f46e5; 
+  background-color: #23242b;
+}
+
+/* Top popular dynamic relative ribbon label tag */
+.tier-popular-tag {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: rgba(79, 70, 229, 0.15);
+  color: #818cf8;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Tier Headers Area spacing */
+.tier-info-top {
+  margin-bottom: 24px;
+}
+
+.tier-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.tier-price-row {
+  display: flex;
+  align-items: baseline;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.tier-currency {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 2px;
+}
+
+.tier-value {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tier-duration {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-left: 4px;
+}
+
+.tier-marketing-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin: 12px 0 24px 0;
+}
+
+/* Button variants layout rules */
+.tier-action-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.current-tier-btn {
+  background-color: transparent;
+  border: 1px solid #40414f;
+  color: #7ef2d1; 
+  cursor: not-allowed;
+}
+
+.premium-upgrade-btn {
+  background-color: #10a37f; 
+  border: none;
+  color: #ffffff;
+}
+
+.premium-upgrade-btn:hover {
+  background-color: #1a7f64;
+}
+
+/* Features List layouts stack mappings */
+.tier-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-grow: 1;
+  margin-bottom: 28px;
+}
+
+.tier-feature-row {
+  display: flex;
+  align-items: flex-start;
+  font-size: 13.5px;
+  color: #d1d5db;
+  line-height: 1.4;
+}
+
+.tier-feature-icon {
+  margin-right: 12px;
+  color: #9ca3af;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.highlighted-icon {
+  color: #818cf8; 
+}
+
+.pricing-outer-footer-row {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.pricing-back-text-btn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: #9ca3af;
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+  margin:0 auto;
+}
+
+.pricing-back-text-btn:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .pricing-modal-grid {
+    flex-direction: column;
+  }
+  .pricing-card-container {
+    padding: 30px 16px 20px 16px;
+  }
+}
