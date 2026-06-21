@@ -7,7 +7,7 @@ import ChatRoutes from "./routes/chat.js";
 import AuthRoutes from "./routes/auth.js"; // <-- 1. Import Auth Routes
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(cors());

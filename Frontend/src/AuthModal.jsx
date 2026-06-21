@@ -21,7 +21,8 @@ function AuthModal({ mode }) {
     setLoading(true);
     const endpoint = mode === "signup" ? "/api/auth/signup" : "/api/auth/login";
     try {
-      const response = await fetch(`http://localhost:8080${endpoint}`, {
+      const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:8080";
+      const response = await fetch(`${baseUrl}${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

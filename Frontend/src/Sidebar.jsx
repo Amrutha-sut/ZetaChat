@@ -24,7 +24,8 @@ function Sidebar() {
         }
 
         try {
-            const response = await fetch("http://localhost:8080/api/thread", {
+            const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:8080";
+            const response = await fetch(`${baseUrl}/api/thread`, {
                 headers: { "Authorization": `Bearer ${activeToken}` }
             });
             
@@ -65,8 +66,8 @@ function Sidebar() {
         const activeToken = token || localStorage.getItem("token");
         
         try {
-            // 🛠️ FIX 3: Added authorization headers to prevent 401 unauthorized errors
-            const response = await fetch(`http://localhost:8080/api/thread/${newThreadId}`, {
+            const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:8080";
+            const response = await fetch(`${baseUrl}/api/thread/${newThreadId}`, {
                 headers: { "Authorization": `Bearer ${activeToken}` }
             });
             const res = await response.json();
@@ -82,9 +83,9 @@ function Sidebar() {
 
     const deleteThread = async (threadId) => {
         const activeToken = token || localStorage.getItem("token");
-
         try {
-            const response = await fetch(`http://localhost:8080/api/thread/${threadId}`, {
+            const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:8080";
+            const response = await fetch(`${baseUrl}/api/thread/${threadId}`, {
                 method: "DELETE",
                 headers: { "Authorization": `Bearer ${activeToken}` }
             });

@@ -42,7 +42,9 @@ function ChatWindow(){
             body: JSON.stringify({ message: prompt, threadId: currThreadId })
         };
         try {
-            const response = await fetch("http://localhost:8080/api/chat", options);
+            const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:8080";
+            const response = await fetch(`${baseUrl}/api/chat`, options);
+
             const res = await response.json();
             
             if (response.ok) {
