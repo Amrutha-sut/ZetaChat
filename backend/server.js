@@ -15,6 +15,10 @@ app.use(cors());
 app.use("/api", ChatRoutes);
 app.use("/api/auth", AuthRoutes); // <-- 2. Register Auth Routes (/api/auth/signup & /api/auth/login)
 
+app.get("/",(req,res)=>{
+    res.send("backend server is running successfully!");
+});
+
 // Keep your DB connection helper organized above invocation
 const ConnectDB = async () => {
     try {
